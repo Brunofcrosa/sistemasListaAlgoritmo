@@ -1,23 +1,34 @@
-/**1. Desenvolver um programa com uma função para ler 15 números, armazená-los em um vetor e mostrar o
-total de números digitados maiores que 5.
-**/
 #include <stdio.h>
-void contarNumeros() 
-{
-    int numeros[15], i, count = 0;
-    
-    for (i = 0; i < 15; i++) {
-        printf("Digite o numero %d: ", i + 1);
-        scanf("%d", &numeros[i]);
-        
-        if (numeros[i] > 5) {
-            count++;
-        }
-    }
-    printf("Total de numeros maiores que 5: %d\n", count);
-}
 
 int main() {
-    contarNumeros();
+    int matrizA[5][5];
+    int matrizB[5][5];
+    int i, j;
+
+    printf("Digite os elementos da matriz A (5x5):\n");
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            scanf("%d", &matrizA[i][j]);
+        }
+    }
+
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            if (i == j) { // Diagonal principal
+                matrizB[i][j] = matrizA[i][j] * 3;
+            } else {
+                matrizB[i][j] = matrizA[i][j] * 2;
+            }
+        }
+    }
+
+    printf("\nMatriz B:\n");
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("%d\t", matrizB[i][j]);
+        }
+        printf("\n");
+    }
+
     return 0;
 }
