@@ -9,7 +9,8 @@ Informa as coordenadas da tentativa (linha e coluna).
 Se acertar uma posição com 9, ganha 1 ponto.
 Se errar, a posição é marcada como -1.                                                
 O jogo termina após 10 tentativas ou quando o jogador encontra todas as posições com 9.                                      
-
+"No comments in the code, just the code itself, without using pointers, using struct and as simple as possible,
+as if for a beginner and in Portuguese."
 O que exibir ao final:
 Matriz final com acertos (9), erros (-1) e posições não reveladas (0);
 Número de acertos do jogador;
